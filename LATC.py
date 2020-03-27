@@ -30,12 +30,6 @@ async def on_ready():
     u.nprint("GREEN", "MAIN", "ALL PROCESSES INITIALIZED SUCCESFULLY")
 
 
-@bot.command(brief="Check if the bot is online")
-async def ping(ctx):
-    await ctx.send("Pong! The bot is online.")
-    u.cprint("GREEN", "MAIN", ctx, "BOT PINGED")
-
-
 @bot.command(brief="Reload all of the bots modules (update the code)")
 async def reload(ctx):
     u.cprint("GREEN", "MAIN", ctx, "PROCESSES RE-INITIALIZED")

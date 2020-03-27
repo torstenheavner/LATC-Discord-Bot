@@ -15,6 +15,11 @@ class General(commands.Cog):
     def cog_unload(self):
         u.print(self.color, self.name, "OFFLINE")
 
+    @commands.command(brief="Check if the bot is online")
+    async def ping(self, ctx):
+        await ctx.send("Pong! The bot is online.")
+        u.cprint(self.color, self.name, ctx, "BOT PINGED")
+
     @commands.command(brief="Call someone cringe")
     async def cringe(self, ctx):
         await ctx.delete()
